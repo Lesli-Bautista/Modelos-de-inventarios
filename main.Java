@@ -3,9 +3,9 @@ import java,util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int opcion,L;
-        double y, D, h,le,t0,n,k,TCU;
-        System.out.println("\n \n \t \Modelos de inventarios");
+        int opcion,L,n;
+        double y, D, h,le,t0,k,TCU;
+        System.out.println("\n \n \tModelos de inventarios");
         System.out.println(" \n \n \tMenu");
         System.out.println("1. Modelo CUQ Clasico");
         System.out.println("2.Modelos de inventario con descuento");
@@ -15,13 +15,13 @@ public class Main {
         switch (opcion) {
             case 1-> {
                 System.out.println("Modelo CUQ Clasico");
-                System.out.println("Ingrese el costo del pedido ");
+                System.out.println("Ingrese el costo del pedido (K)");
                 k= scanner.nextDouble ();
-                System.out.println("Ingrese el indice de la demanda ");
+                System.out.println("Ingrese el indice de la demanda (D) ");
                 D= scanner.nextDouble ();
-                System.out.println("Ingrese el costo de almacenamiento ");
+                System.out.println("Ingrese el costo de almacenamiento (h)");
                 h= scanner.nextDouble ();
-                System.out.println("Ingrese el tiempo de entrega del pedido ");
+                System.out.println("Ingrese el tiempo de entrega del pedido (L)");
                 L= scanner.nextInt();
                 y= Math.sqrt((2*k*D)/h);
                 t0= y/D;
