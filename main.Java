@@ -3,8 +3,8 @@ import java,util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int opcion;
-        int y, D, h, le, L, k;
+        int opcion,L;
+        double y, D, h, le, k;
         System.out.println("\n \n \t \Modelos de inventarios");
         System.out.println(" \n \n \tMenu");
         System.out.println("1. Modelo CUQ Clasico");
@@ -16,11 +16,11 @@ public class Main {
             case 1-> {
                 System.out.println("Modelo CUQ Clasico");
                 System.out.println("Ingrese el costo del pedido ");
-                k= scanner.nextInt();
+                k= scanner.nextDouble ();
                 System.out.println("Ingrese el indice de la demanda ");
-                D= scanner.nextInt();
+                D= scanner.nextDouble ();
                 System.out.println("Ingrese el costo de almacenamiento ");
-                h= scanner.nextInt();
+                h= scanner.nextDouble ();
                 System.out.println("Ingrese el tiempo de entrega del pedido ");
                 L= scanner.nextInt();
 
