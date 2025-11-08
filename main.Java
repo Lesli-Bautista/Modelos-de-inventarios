@@ -27,7 +27,8 @@ public class Main {
                 t0= y/D;
                 n=(int ) (L/t0);
                 le=L-n*t0;
-                
+                TCU=(k/y/D)+(h*(y/2));
+                System.out.println("Costo total del inventario (TCU): " + TCU);
             }
             case 2-> {
 
