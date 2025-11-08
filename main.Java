@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion;
+        int y, D, h, le, L, k;
         System.out.println("\n \n \t \Modelos de inventarios");
         System.out.println(" \n \n \tMenu");
         System.out.println("1. Modelo CUQ Clasico");
@@ -13,6 +14,15 @@ public class Main {
         opcion = scanner.nextInt();
         switch (opcion) {
             case 1-> {
+                System.out.println("Modelo CUQ Clasico");
+                System.out.println("Ingrese el costo del pedido ");
+                k= scanner.nextInt();
+                System.out.println("Ingrese el indice de la demanda ");
+                D= scanner.nextInt();
+                System.out.println("Ingrese el costo de almacenamiento ");
+                h= scanner.nextInt();
+                System.out.println("Ingrese el tiempo de entrega del pedido ");
+                L= scanner.nextInt();
 
             }
             case 2-> {
