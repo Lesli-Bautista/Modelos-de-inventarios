@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion,L;
-        double y, D, h, le, k;
+        double y, D, h,le,t0,n,k,TCU;
         System.out.println("\n \n \t \Modelos de inventarios");
         System.out.println(" \n \n \tMenu");
         System.out.println("1. Modelo CUQ Clasico");
@@ -23,7 +23,11 @@ public class Main {
                 h= scanner.nextDouble ();
                 System.out.println("Ingrese el tiempo de entrega del pedido ");
                 L= scanner.nextInt();
-
+                y= Math.sqrt((2*k*D)/h);
+                t0= y/D;
+                n=L/t0;
+                le=L-n*t0;
+                
             }
             case 2-> {
 
