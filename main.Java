@@ -27,15 +27,16 @@ public class Main {
                 t0= y/D;
                 n=(int ) (L/t0);
                 le=L-n*t0;
+                PDR=le*D;
                 TCU = (D / y) * k + (y / 2) * h;
                 System.out.println("\n");
                 System.out.println("Resultados del problema");
                 System.out.println("Cantidad optima de pedido (y): " + y);
                 System.out.println("Tiempo entre pedidos (t0): " + t0);
-                System.out.println("Punto de reorden (le): " + le);
+                System.out.println("Punto de reorden : " + PDR);
                 System.out.println("Costo total del inventario (TCU): " + TCU);
                 System.out.println("\n");
-                System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) le + " unidades.");
+                System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) PDR + " unidades.");
             }
             case 2-> {
 
