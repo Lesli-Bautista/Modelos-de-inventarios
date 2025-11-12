@@ -14,7 +14,7 @@ public class Main {
         opcion = scanner.nextInt();
         switch (opcion) {
             case 1-> {
-                System.out.println("Modelo CUQ Clasico");
+                System.out.println("Modelo de inventario EUQ Clasico");
                 System.out.println("Ingrese el costo del pedido (K)");
                 k= scanner.nextDouble ();
                 System.out.println("Ingrese el indice de la demanda (D) ");
@@ -39,6 +39,8 @@ public class Main {
                 System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) PDR + " unidades.");
             }
             case 2-> {
+                System.out.println("Modelo de inventario con descuento");
+                
 
             }
             case 3-> {
