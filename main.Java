@@ -58,8 +58,10 @@ public class Main {
                     System.out.println("Ingrese el numero de niveles de descuento");
                     nivel = scanner.nextInt();
                     double[] precios = new double[nivel];
-                    double[] min = new double [nivel];
-                    double[] max = new double[nivel];
+                    for (n = 0; n < nivel; n++) {
+                        System.out.println("Ingrese el precio para el nivel " + (n + 1));
+                        precios[n] = scanner.nextDouble();
+                    }
                 }
                 case 3-> {
                     System.out.println("Salir");
