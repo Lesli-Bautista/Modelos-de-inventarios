@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion,L,n;
-        double y, D, h,le,k,TCU,t0;
+        double y, D, h,le,k,TCU,t0,PDR;
         do{
+            System.out.println("\n");
             System.out.println(" Modelos de inventarios");
             System.out.println(" \n \n \tMenu");
             System.out.println("1. Modelo CUQ Clasico");
@@ -42,15 +43,13 @@ public class Main {
                     System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) PDR + " unidades.");
                 }
                 case 2-> {
-                    double i,demanda,K,H,l,CC,CO,CM;
-                    int n;
+                    double i,demanda,K,H,l,CC,CO,CM,CTU,MCTU,MY,MC,C,puntoReorden;
+                    int nivel;
                     System.out.println("Modelo de inventario con descuento");
                     System.out.println("Ingrese el costo del pedido (K)");
                     K = scanner.nextDouble ();
                     System.out.println("Ingrese el indice de la demanda (D) ");
                     demanda = scanner.nextDouble ();
-                    System.out.println("Ingrese el costo de almacenamiento (h)");
-                    H = scanner.nextDouble ();
                     System.out.println("Ingrese el tiempo de entrega del pedido (L)");
                     l = scanner.nextInt();
                     System.out.println("Ingrese el descuento de almacenamiento (i) (ej: 0.12)");
@@ -59,10 +58,38 @@ public class Main {
                     nivel = scanner.nextInt();
                     double[] precios = new double[nivel];
                     for (n = 0; n < nivel; n++) {
-                        System.out.println("Ingrese el precio para el nivel " + (n + 1));
+                        System.out.println("Ingrese el precio para el nivel (C)" + (n + 1));
                         precios[n] = scanner.nextDouble();
                     }
-                    
+                    MCTU = Double.MAX_VALUE;
+                    MY = 0;
+                    MC = 0;
+                    for (n = 0; n < nivel; n++) {
+                        C= precios[n];
+                        H= C * i;
+                        y= Math.sqrt((2 * K * demanda) / H);
+                        //Calcular el costo total de inventario
+                        CC = (demanda* C);
+                        CO = (demanda* K) / y;
+                        CM = (H* y) / 2;
+                        CTU= CC + CO + CM;
+                        System.out.println("\n");
+                        System.out.println("\n\n Nivel " + (n + 1) + " (C = " + C + "):");
+                        System.out.println("Cantidad optima de pedido (y): " + y);
+                        System.out.println("Costo total del inventario (CTU): " + CTU);
+                        if (CTU < MCTU) {
+                            MCTU = CTU;
+                            MY = y;
+                            MC = C;
+                        }  
+                    }
+                    System.out.println("\n");
+                    System.out.println("Resultados del problema:");
+                    System.out.println("Cantidad optima de pedido (y): " + MY);
+                    System.out.println("Precio optimo (C): " + MC);
+                    System.out.println("Costo total minimo del inventario (CTU): " + MCTU);
+                    puntoReorden=l*demanda;
+                    System.out.println("Punto de reorden: " + puntoReorden);
                 }
                 case 3-> {
                     System.out.println("Salir");
