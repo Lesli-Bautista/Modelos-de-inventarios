@@ -62,6 +62,7 @@ public class Main {
                         System.out.println("Ingrese el precio para el nivel " + (n + 1));
                         precios[n] = scanner.nextDouble();
                     }
+                    
                 }
                 case 3-> {
                     System.out.println("Salir");
