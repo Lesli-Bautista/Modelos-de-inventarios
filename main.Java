@@ -42,24 +42,24 @@ public class Main {
                     System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) PDR + " unidades.");
                 }
                 case 2-> {
-                    double CC,CO,CM;
+                    double i,demanda,K,H,l,CC,CO,CM;
                     int n;
                     System.out.println("Modelo de inventario con descuento");
                     System.out.println("Ingrese el costo del pedido (K)");
-                    k = scanner.nextDouble ();
+                    K = scanner.nextDouble ();
                     System.out.println("Ingrese el indice de la demanda (D) ");
-                    D = scanner.nextDouble ();
+                    demanda = scanner.nextDouble ();
                     System.out.println("Ingrese el costo de almacenamiento (h)");
-                    h = scanner.nextDouble ();
+                    H = scanner.nextDouble ();
                     System.out.println("Ingrese el tiempo de entrega del pedido (L)");
-                    L = scanner.nextInt();
+                    l = scanner.nextInt();
                     System.out.println("Ingrese el descuento de almacenamiento (i) (ej: 0.12)");
                     i = scanner.nextDouble ();
                     System.out.println("Ingrese el numero de niveles de descuento");
-                    n = scanner.nextInt();
-                    double[] precios = new double[n];
-                    double[] min = new double [n];
-                    double[] max = new double[n];
+                    nivel = scanner.nextInt();
+                    double[] precios = new double[nivel];
+                    double[] min = new double [nivel];
+                    double[] max = new double[nivel];
                 }
                 case 3-> {
                     System.out.println("Salir");
