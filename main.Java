@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion,L,n;
-        double y, D, h,le,t0,k,TCU;
+        double y, D, h,le,k,TCU,t0;
         System.out.println(" Modelos de inventarios");
         System.out.println(" \n \n \tMenu");
         System.out.println("1. Modelo CUQ Clasico");
@@ -15,6 +15,8 @@ public class Main {
         switch (opcion) {
             case 1-> {
                 System.out.println("Modelo de inventario EUQ Clasico");
+                System.out.println("Ingrese los siguientes datos:");
+                System.out.println("\n");
                 System.out.println("Ingrese el costo del pedido (K)");
                 k= scanner.nextDouble ();
                 System.out.println("Ingrese el indice de la demanda (D) ");
@@ -39,9 +41,24 @@ public class Main {
                 System.out.println("Pedir " + (int) y + " unidades cada " + (int) t0 + " dias, o cuando el nivel de inventario llegue a " + (int) PDR + " unidades.");
             }
             case 2-> {
-                System.out.println("Modelo de inventario con descuento");
+                double K,D,H,C,i,Y,CTU,CC,CO,CM,L,PDR;
                 
-
+                System.out.println("Modelo de inventario con descuento");
+                System.out.println("Ingrese el costo del pedido (K)");
+                k = scanner.nextDouble ();
+                System.out.println("Ingrese el indice de la demanda (D) ");
+                D = scanner.nextDouble ();
+                System.out.println("Ingrese el costo de almacenamiento (h)");
+                H = scanner.nextDouble ();
+                System.out.println("Ingrese el tiempo de entrega del pedido (L)");
+                L = scanner.nextInt();
+                System.out.println("Ingrese el descuento de almacenamiento (i) (ej: 0.12)");
+                i = scanner.nextDouble ();
+                System.out.println("Ingrese el numero de niveles de descuento");
+                n = scanner.nextInt();
+                double[] precios = new double[n];
+                double[] min = new double [n];
+                double[] max = new double[n];
             }
             case 3-> {
                 System.out.println("Salir");
